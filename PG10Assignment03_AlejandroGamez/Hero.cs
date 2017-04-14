@@ -18,7 +18,7 @@ namespace PG10Assignment03_AlejandroGamez {
         public Hero() {
 
         }
-
+        // comments
         public void DealDamage(int amount, IDamageable target) {
 
         }
