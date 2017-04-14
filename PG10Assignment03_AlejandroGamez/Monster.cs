@@ -11,7 +11,7 @@ namespace PG10Assignment03_AlejandroGamez {
         When Level Class instatiate a Monster class, Level needs to pass the map_lvl to Monster constructor.
      */
 
-    class Monster
+    class Monster: IDamageable
     {
 
         //Array of possible monster names
@@ -84,9 +84,14 @@ namespace PG10Assignment03_AlejandroGamez {
             return m_bIsAlive;
         }
 
-        
-
         //  *****************************************************************************************************************************
+
+        // Take Damage ******************************************************************************************************************
+
+        public void TakeDamage(int amount)
+        {
+
+        }
 
     }
 }

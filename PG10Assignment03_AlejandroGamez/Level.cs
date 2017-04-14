@@ -45,9 +45,8 @@ namespace PG10Assignment03_AlejandroGamez {
             }
              else
             {
-                m_iActualLevelLvl++;
-                m_MonstersKilled = 0;
                 m_bIsLevelEnded = true;
+                goNextLevel();
             }
             
 
@@ -100,7 +99,7 @@ namespace PG10Assignment03_AlejandroGamez {
 
         // Setters **********************************************************************************************************************
 
-        public void goNextLevel()
+        private void goNextLevel()
         {
             // Here we can create an dificulty constant using Hero and Player Class
             // To set a lvl we need some simple math like:
@@ -110,6 +109,7 @@ namespace PG10Assignment03_AlejandroGamez {
             if (m_bIsLevelEnded)
             {
                 m_iActualLevelLvl++;
+                m_MonstersKilled = 0;
                 m_sMapName = m_sMapNames[m_iActualLevelLvl];
                 Monster new_Monster = new Monster(m_iActualLevelLvl);
                 m_ActiveMonster = new_Monster;
