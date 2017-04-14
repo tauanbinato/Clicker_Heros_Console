@@ -10,11 +10,12 @@ namespace PG10Assignment03_AlejandroGamez
     {
         // Constants
         public const int ACTION_DEAL_DAMAGE = 1;
-        public const int ACTION_UPGRADE = 2;
+        public const int ACTION_UPGRADE_HERO = 2;
         public const int ACTION_LEVELUP = 3;
         public const int BASIC_HERO_TYPE = 1;
         public const int BASIC_HERO_DAMAGE = 1;
-        public const int HERO_MAX = 10;
+        public const int HERO_MAX_COUNT = 10;
+        public const int HERO_MAX_LEVEL = 10;
         // Variables
         string sName;
         double dGold;
@@ -24,7 +25,7 @@ namespace PG10Assignment03_AlejandroGamez
         {
             sName = "Default Player";
             dGold = 0;
-            hero = new Hero[HERO_MAX];
+            hero = new Hero[HERO_MAX_COUNT];
             hero[0] = new Hero(BASIC_HERO_TYPE);
         }
 
@@ -36,7 +37,8 @@ namespace PG10Assignment03_AlejandroGamez
                 case ACTION_DEAL_DAMAGE:
                     //DealDamage(iCurrentDamagePerClick, )
                     break;
-                case ACTION_UPGRADE:
+                case ACTION_UPGRADE_HERO:
+
                     break;
                 case ACTION_LEVELUP:
                     break;

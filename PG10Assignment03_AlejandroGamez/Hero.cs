@@ -9,8 +9,13 @@ namespace PG10Assignment03_AlejandroGamez
     class Hero : IDealDamage
     {
         // Constants
+        public const int ACTION_DEAL_DAMAGE = 1;
+        public const int ACTION_UPGRADE_HERO = 2;
+        public const int ACTION_LEVELUP = 3;
         public const int BASIC_HERO_TYPE = 1;
         public const int BASIC_HERO_DAMAGE = 1;
+        public const int HERO_MAX_COUNT = 10;
+        public const int HERO_MAX_LEVEL = 10;
         // Variables
         private string sName;
         private int iLevel;                     // can be set between 1 to 10
@@ -41,7 +46,13 @@ namespace PG10Assignment03_AlejandroGamez
         }
         
         // Public Functions
-
+        void Upgrade()
+        {
+            if (iLevel<HERO_MAX_LEVEL)
+            {
+                iLevel++;
+            }
+        }
         // Private Functions
         
         // Interfaces
