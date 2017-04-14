@@ -11,12 +11,13 @@ namespace PG10Assignment03_AlejandroGamez {
 
         public Game() {
             Console.SetWindowSize(150, 50);
+            screen.ClearScreen();
             do {
 
                 
                 switch(Input.KeyDown()) {
                     case ConsoleKey.Spacebar:
-                        Input.Print("space");
+                        
                         break;
 
                     case ConsoleKey.Backspace:

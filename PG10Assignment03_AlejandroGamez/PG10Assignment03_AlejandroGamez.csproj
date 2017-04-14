@@ -75,7 +75,13 @@
     <None Include="txt\hud.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="txt\Enemy1.txt" />
+    <None Include="txt\Enemy.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="txt\Hero.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="txt\Wolf.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
