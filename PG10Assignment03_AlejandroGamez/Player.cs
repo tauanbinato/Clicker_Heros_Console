@@ -19,7 +19,7 @@ namespace PG10Assignment03_AlejandroGamez
         public const int HERO_MAX_LEVEL = 10;
         public const int ACTION_DAMAGE_PER_CLICK = 1;
         public const int ACTION_DAMAGE_PER_SECOND = 2;
-        public const double BASE_GOLD_NEED = 25;
+        public const float BASE_GOLD_NEED = 25;
         // Variables
         Hero[] hero;
         public int iDamagePerClick
@@ -42,12 +42,12 @@ namespace PG10Assignment03_AlejandroGamez
             }
         }
         private string sName;
-        private double dGold;
+        private float fGold;
         // Constructor
         public Player()
         {
             sName = "Default Player";
-            dGold = 0;
+            fGold = 0;
             hero = new Hero[HERO_MAX_COUNT];
             for (int i=0;i<HERO_MAX_COUNT;i++)
             {
@@ -63,16 +63,16 @@ namespace PG10Assignment03_AlejandroGamez
                 case ACTION_DEAL_DAMAGE:
                     break;
                 case ACTION_HERO_BUY:
-                    if (dGold >= hero[iParameter].dGoldNeedToBuy)
+                    if (fGold >= hero[iParameter].fGoldNeedToBuy)
                     {
-                        dGold -= hero[iParameter].dGoldNeedToBuy;
+                        fGold -= hero[iParameter].fGoldNeedToBuy;
                         hero[iParameter].Upgrade();
                     }
                     break;
                 case ACTION_HERO_UPGRADE:
-                    if (dGold>=hero[iParameter].dGoldNeedToUpgrade)
+                    if (fGold>=hero[iParameter].fGoldNeedToUpgrade)
                     {
-                        dGold -= hero[iParameter].dGoldNeedToUpgrade;
+                        fGold -= hero[iParameter].fGoldNeedToUpgrade;
                         hero[iParameter].Upgrade();
                     }
                     break;
@@ -81,9 +81,9 @@ namespace PG10Assignment03_AlejandroGamez
             }
         }
 
-        public void TakeGold(double dAmount)
+        public void TakeGold(float fAmount)
         {
-            dGold += dAmount;
+            fGold += fAmount;
         }
 
         public void DealDamage(int amount, IDamageable target)

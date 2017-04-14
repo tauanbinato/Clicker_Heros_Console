@@ -19,7 +19,7 @@ namespace PG10Assignment03_AlejandroGamez
         public const int HERO_MAX_LEVEL = 10;
         public const int ACTION_DAMAGE_PER_CLICK = 1;
         public const int ACTION_DAMAGE_PER_SECOND = 2;
-        public const double BASE_GOLD_NEED = 25;
+        public const float BASE_GOLD_NEED = 25;
         // Variables
         private string sName;
         private int iLevel;                     // can be set between 1 to 10
@@ -47,14 +47,14 @@ namespace PG10Assignment03_AlejandroGamez
                 return iCurrentDamagePerClick + iCurrentDamagePerSecond;
             }
         }
-        public double dGoldNeedToUpgrade
+        public float fGoldNeedToUpgrade
         {
             get
             {
                 return BASE_GOLD_NEED * iLevel * iType;
             }
         }
-        public double dGoldNeedToBuy
+        public float fGoldNeedToBuy
         {
             get
             {

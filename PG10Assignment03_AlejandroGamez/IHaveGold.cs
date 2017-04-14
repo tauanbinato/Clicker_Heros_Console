@@ -8,6 +8,6 @@ namespace PG10Assignment03_AlejandroGamez
 {
     interface IHaveGold
     {
-        void TakeGold(double dAmount);
+        void TakeGold(float fAmount);
     }
 }
