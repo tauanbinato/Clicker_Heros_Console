@@ -67,6 +67,7 @@ namespace PG10Assignment03_AlejandroGamez
             sName = "Type "+iHeroType.ToString()+" Hero";
             iType = iHeroType;
             iLevel = 0;
+            // Only fist hero type can make damage per click. The rest of heroes make damage per second.
             if (iHeroType == BASIC_HERO_TYPE)
             {
                 iBaseDamagePerClick = BASIC_HERO_DAMAGE;
