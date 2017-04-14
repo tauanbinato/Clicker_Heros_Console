@@ -49,6 +49,8 @@
     <Compile Include="IAction.cs" />
     <Compile Include="IDamagable.cs" />
     <Compile Include="IDealDamage.cs" />
+    <Compile Include="IGiveGold.cs" />
+    <Compile Include="IHaveGold.cs" />
     <Compile Include="Input.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="Monster.cs" />
