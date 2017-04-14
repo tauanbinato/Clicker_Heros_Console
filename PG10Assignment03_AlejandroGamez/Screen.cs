@@ -12,7 +12,7 @@ namespace PG10Assignment03_AlejandroGamez {
 
         
 
-        //clears the screen and draws the HUD again
+        //clears the screen and draws the HUD 
         public static void ClearScreen() {
             string textFile = Resources.hud;
             string texFile2 = Resources.Enemy1;
