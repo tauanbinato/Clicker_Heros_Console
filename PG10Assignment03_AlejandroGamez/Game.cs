@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace PG10Assignment03_AlejandroGamez {
     class Game {
         bool isRuning = true;
+        private Screen screen = new Screen();
 
         public Game() {
             Console.SetWindowSize(150, 50);
@@ -19,7 +20,7 @@ namespace PG10Assignment03_AlejandroGamez {
                         break;
 
                     case ConsoleKey.Backspace:
-                        Screen.ClearScreen();
+                        screen.ClearScreen();
                         break;
 
                     case ConsoleKey.Escape:
