@@ -10,15 +10,8 @@ using PG10Assignment03_AlejandroGamez.Properties;
 namespace PG10Assignment03_AlejandroGamez {
     class Screen {
 
-        //;kdsanf;salknf;lksfd
-        //;kdsanf;salknf;lksfd
-        //;kdsanf;salknf;lksfd
-        //;kdsanf;salknf;lksfd
-        //;kdsanf;salknf;lksfd
-        //;kdsanf;salknf;lksfd
-        //;kdsanf;salknf;lksfd
-
-        //clears the screen and draws the HUD again 
+       
+        //clears the screen and draws the HUD
         public static void ClearScreen() {
             string textFile = Resources.hud;
             string texFile2 = Resources.Enemy1;
