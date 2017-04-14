@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace PG10Assignment03_AlejandroGamez
 {
-    interface IAction
+    interface IGiveGold
     {
-        void DoAction(int iAction,int iParameter);
+        void GiveGold(double dAmount, IHaveGold target);
     }
 }
