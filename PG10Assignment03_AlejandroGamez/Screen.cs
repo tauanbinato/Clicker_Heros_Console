@@ -12,25 +12,6 @@ namespace PG10Assignment03_AlejandroGamez {
 
         
 
-        //clears the screen and draws the HUD 
-        public static void ClearScreen() {
-            string textFile = Resources.hud;
-            string texFile2 = Resources.Enemy1;
-            //Clears the screen
-            Console.Clear();
-            for(int i = 0; i < texFile2.Length; ++i) {
-                int index = textFile.IndexOf('*');
-                char c2Change = texFile2.ElementAt(i);
-                if() {
-
-                }
-                textFile = textFile.Remove(index, 1);
-                
-                textFile = textFile.Insert(index, .ToString());
-            }
-            
-            
-            Input.Print(textFile,ConsoleColor.Red);
-        }
+       
     }
 }
