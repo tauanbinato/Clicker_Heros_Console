@@ -18,13 +18,15 @@ namespace PG10Assignment03_AlejandroGamez {
             string texFile2 = Resources.Enemy1;
             //Clears the screen
             Console.Clear();
-            for(int i = 0; i < texFile2.Length-1; ++i) {
+            for(int i = 0; i < texFile2.Length; ++i) {
                 int index = textFile.IndexOf('*');
-                if(index > -1) {
-                    textFile = textFile.Remove(index, 1);
-                    int index2 = texFile2.IndexOf('|');
-                    textFile = textFile.Insert(index, texFile2.ElementAt(index2).ToString());
+                char c2Change = texFile2.ElementAt(i);
+                if() {
+
                 }
+                textFile = textFile.Remove(index, 1);
+                
+                textFile = textFile.Insert(index, .ToString());
             }
             
             
