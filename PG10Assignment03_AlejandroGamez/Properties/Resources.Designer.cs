@@ -61,41 +61,55 @@ namespace PG10Assignment03_AlejandroGamez.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///||||||||||||||||||||||||||||||||
-        ///|| [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to                                                                                 *
+        ///  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    *
+        ///  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    *
+        ///  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    *
+        ///  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    *
+        ///  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++    *
+        ///  ++++++++++++ [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string Enemy1 {
+        internal static string Enemy {
             get {
-                return ResourceManager.GetString("Enemy1", resourceCulture);
+                return ResourceManager.GetString("Enemy", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This is my text
-        ///
-        ///HUD
-        /// ---------------------------------------------------------------------------------------------------------------------------------------
-        ///|                                                           |                                                                            |
-        ///|     {0}                                                   |                                                                |
-        ///|                                                           |                      [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to #------------------------------------------#
+        ///| LVL.UP $${0}  MASHER DMG ${1} LVL ${2} |
+        ///#------------------------------------------#.
+        /// </summary>
+        internal static string Hero {
+            get {
+                return ResourceManager.GetString("Hero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  ---------------------------------------------------------------------------------------------------------------------------------------------------
+        ///|           &apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;                |                            &apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;                           |
+        ///|           &apos;&apos;&apos;&apos;&apos;&apos;&apos;  -- Gold  ${0} --  &apos;&apos;&apos;&apos;&apos;&apos;&apos;              |                            &apos;&apos;&apos;&apos;&apos;&apos;  -- Level - ${1} --  &apos;&apos;&apos;&apos;&apos;&apos;                           |
+        ///|           &apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&apos;&ap....
         /// </summary>
         internal static string hud {
             get {
                 return ResourceManager.GetString("hud", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to                                                                                 *
+        ///                                                                                *
+        ///                                                                                *
+        ///                                                                                *
+        ///                                                                                *
+        ///                                                                                *
+        ///               [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Wolf {
+            get {
+                return ResourceManager.GetString("Wolf", resourceCulture);
             }
         }
     }

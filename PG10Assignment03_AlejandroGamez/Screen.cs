@@ -10,11 +10,23 @@ using PG10Assignment03_AlejandroGamez.Properties;
 namespace PG10Assignment03_AlejandroGamez {
     class Screen {
         private string textFile = Resources.hud;
+
+        private string hero = Resources.Hero;
+
+        private string Enemy = Resources.Enemy;
+
         //clears the screen and draws the HUD
         public void ClearScreen() {
             //Clears the screen
             Console.Clear();
-            textFile = ReplaceCharsWithTextFile('*',Resources.Enemy1, textFile);
+
+            for(int i = 0; i < 10; ++i) {
+                textFile = ReplaceCharsWithTextFile('+', hero, textFile);
+            }
+
+            Enemy = ReplaceCharsWithTextFile('+', Resources.Wolf, Enemy);
+
+            textFile = ReplaceCharsWithTextFile('*', Enemy, textFile);
             
             Input.Print(textFile, ConsoleColor.Green);
         }
