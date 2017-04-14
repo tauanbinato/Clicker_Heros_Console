@@ -17,21 +17,23 @@ namespace PG10Assignment03_AlejandroGamez {
             ConsoleKeyInfo cki;
 
             do {
-                Console.WriteLine("\nPress a key to display; press the 'x' key to quit.");
-
                 // Your code could perform some useful task in the following loop. However, 
                 // for the sake of this example we'll merely pause for a quarter second.
-
-                while(Console.KeyAvailable == false) {
-                    
-                    Thread.Sleep(250); // Loop until input is entered.
-                }
+                Print(Console.KeyAvailable.ToString());
+                //while(Console.KeyAvailable == false) {
+                //    keysPressed.Clear();
+                //    //Thread.Sleep(250); // Loop until input is entered.
+                //}
 
                 cki = Console.ReadKey(true);
-                Console.WriteLine("You pressed the '{0}' key.", cki.Key);
+                
+                //if(!keysPressed.Contains(cki.Key)) {
+                //    Console.WriteLine("You pressed the '{0}' key.", cki.Key);
 
-                keysPressed
-            } while(cki.Key != ConsoleKey.X);
+                //    keysPressed.Add(cki.Key);
+                //}
+                
+            } while(true);
         }
 
         //Print function for not writing Console.WriteLine everytime. Accepts arguments and color
