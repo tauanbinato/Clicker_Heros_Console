@@ -3,29 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace PG10Assignment03_AlejandroGamez {
 
     public class Input {
-        //Got this code from http://stackoverflow.com/questions/38411342/c-sharp-console-app-how-to-prevent-user-from-holding-down-a-key-when-using-a-re
-        //by Steve in CO
-        //Resets last pressed time variable to the smallest value possible.
-        public static DateTime lastPressedTime = DateTime.MinValue;
 
-        //Detects if a key is pressed but doesn't return input until its released and pressed again.
-        public static ConsoleKey KeyDown(ConsoleKey key , float delay = 0.05f) {
-            //If the selected key is pressed and the current time is greater than the last key press
-            //return true
-            ConsoleKeyInfo keyInfo;
-            if((keyInfo = Console.ReadKey(true)).Key == key && DateTime.Now > lastPressedTime.AddSeconds(delay)) {
-                //Set the current time as the last time a key was pressed 
-                lastPressedTime = DateTime.Now;
-                return keyInfo.Key;
-            }
-            
-            //Set the current time as the last time a key was pressed 
-            lastPressedTime = DateTime.Now;
-            return ConsoleKey.NoName;
+        public static List<ConsoleKey> keysPressed = new List<ConsoleKey>();
+
+        
+        public static void KeyUp() {
+
+            ConsoleKeyInfo cki;
+
+            do {
+                Console.WriteLine("\nPress a key to display; press the 'x' key to quit.");
+
+                // Your code could perform some useful task in the following loop. However, 
+                // for the sake of this example we'll merely pause for a quarter second.
+
+                while(Console.KeyAvailable == false) {
+                    
+                    Thread.Sleep(250); // Loop until input is entered.
+                }
+
+                cki = Console.ReadKey(true);
+                Console.WriteLine("You pressed the '{0}' key.", cki.Key);
+
+                keysPressed
+            } while(cki.Key != ConsoleKey.X);
         }
 
         //Print function for not writing Console.WriteLine everytime. Accepts arguments and color

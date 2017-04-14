@@ -9,20 +9,9 @@ namespace PG10Assignment03_AlejandroGamez {
 
 
         public Game() {
-            bool isGameRunning = true;
-            do {
-                switch(Input.KeyDown(Console.ReadKey(true).Key)) {
-                    case ConsoleKey.Spacebar:
-                        Input.Print("space");
-                        break;
-                    case ConsoleKey.Backspace:
-                        
-                        break;
-                    case ConsoleKey.Escape:
-                        isGameRunning = false;
-                        break;
-                }
-            } while(isGameRunning);
+            
+            Input.KeyUp();
+            
         }
     }
 }
