@@ -8,32 +8,26 @@ using System.Threading;
 namespace PG10Assignment03_AlejandroGamez {
 
     public class Input {
-
         public static List<ConsoleKey> keysPressed = new List<ConsoleKey>();
-
-        
-        public static void KeyUp() {
+            
+        public static ConsoleKey KeyDown() {
 
             ConsoleKeyInfo cki;
 
-            do {
-                // Your code could perform some useful task in the following loop. However, 
-                // for the sake of this example we'll merely pause for a quarter second.
-                Print(Console.KeyAvailable.ToString());
-                //while(Console.KeyAvailable == false) {
-                //    keysPressed.Clear();
-                //    //Thread.Sleep(250); // Loop until input is entered.
-                //}
-
-                cki = Console.ReadKey(true);
+            // Your code could perform some useful task in the following loop. However, 
+            // for the sake of this example we'll merely pause for a quarter second.   
+            while(Console.KeyAvailable == false ) {
+                keysPressed.Clear();    
+                Thread.Sleep(50); // Loop until input is entered.
+                return ConsoleKey.NoName;
+            }
                 
-                //if(!keysPressed.Contains(cki.Key)) {
-                //    Console.WriteLine("You pressed the '{0}' key.", cki.Key);
-
-                //    keysPressed.Add(cki.Key);
-                //}
-                
-            } while(true);
+            cki = Console.ReadKey(true);
+            if(!keysPressed.Contains(cki.Key)) {
+                keysPressed.Add(cki.Key);
+                return cki.Key;
+            }
+            return ConsoleKey.NoName;
         }
 
         //Print function for not writing Console.WriteLine everytime. Accepts arguments and color
