@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace PG10Assignment03_AlejandroGamez {
     class Program {
         static void Main(string[] args) {
-        //Initialize reset bool
-        bool reset = false;
+            //Initialize reset bool
+            bool reset = false;
 
             //Creating a Game variable
             Game game;
