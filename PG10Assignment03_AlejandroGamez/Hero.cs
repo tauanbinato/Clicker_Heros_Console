@@ -21,8 +21,8 @@ namespace PG10Assignment03_AlejandroGamez
         public const int ACTION_DAMAGE_PER_SECOND = 2;
         public const float BASE_GOLD_NEED = 25;
         // Variables
-        private string sName;
-        private int iLevel;                     // can be set between 1 to 10
+        public string sName;
+        public int iLevel; //declared it as public for screen class usage                     // can be set between 1 to 10
         private int iType;                      // can be set between 1 to 10
         private int iBaseDamagePerClick;
         private int iBaseDamagePerSecond;

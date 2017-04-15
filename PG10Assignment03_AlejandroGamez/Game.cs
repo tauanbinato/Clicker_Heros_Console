@@ -18,12 +18,21 @@ namespace PG10Assignment03_AlejandroGamez {
                                    "Bloody Mary","Beer","Tequila"};
         //test variables -----------------------------------------------------------------------------------------------------------------------------------
 
-        public Game() {
-            Console.SetWindowSize(150, 50);
-            screen.ClearScreen();
-            do {
+        //Player variable not initialized.
+        private Player player;
 
-                
+
+        public Game() {
+            //setting the screen size.
+            Console.SetWindowSize(150, 50);
+            
+            //Initializing the player via Singleton.
+            player = Player.Instance;
+
+            //Setting the HUD for the first time.
+            screen.ClearScreen();
+
+            do {
                 switch(Input.KeyDown()) {
                     case ConsoleKey.Spacebar:
                         //All this should be a function inside the monster ---------------------
