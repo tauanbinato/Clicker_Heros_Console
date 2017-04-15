@@ -20,18 +20,27 @@ namespace PG10Assignment03_AlejandroGamez {
             //Clears the screen
             Console.Clear();
 
+            HUD = Resources.hud;
+            hero = Resources.Hero;
+
+            Enemy = Resources.Enemy;
+
             for(int i = 0; i < 10; ++i) {
-                HUD = ReplaceCharsWithTextFile('+', hero, HUD);
+                HUD = ReplaceCharsWithTextFile('+', HUD, hero);
             }
+            Enemy = ReplaceCharsWithTextFile('*', Enemy, "Bloody Marry", true);
+            Enemy = ReplaceCharsWithTextFile('^', Enemy, Game.level.ToString(), true);
+            Enemy = ReplaceCharsWithTextFile('@', Enemy, Game.enemyHealth.ToString(), true);
+            Enemy = ReplaceCharsWithTextFile('+', Enemy, Resources.Wolf, true);
 
-            Enemy = ReplaceCharsWithTextFile('+', Resources.Wolf, Enemy);
+            
 
-            HUD = ReplaceCharsWithTextFile('*', Enemy, HUD);
+            HUD = ReplaceCharsWithTextFile('*', HUD, Enemy, true);
             
             Input.Print(HUD, ConsoleColor.Green);
         }
 
-        private string ReplaceCharsWithTextFile(char toReplace, string textFile, string text2Change) {
+        private string ReplaceCharsWithTextFile(char toReplace, string text2Change, string textFile, bool removeExedent = false) {
             string tempString = text2Change;
 
             textFile = textFile.Replace("\n", "");
@@ -44,8 +53,12 @@ namespace PG10Assignment03_AlejandroGamez {
 
                     tempString = tempString.Remove(index, 1);
 
-                    tempString = tempString.Insert(index, textFile.ElementAt(i).ToString());
+                    tempString = tempString.Insert(index, textFile.ElementAt(i).ToString().ToUpper());
                 }
+            }
+
+            if(tempString.Contains(toReplace) && removeExedent) {
+                tempString = tempString.Replace(toReplace.ToString(), " ");
             }
 
             return tempString;
