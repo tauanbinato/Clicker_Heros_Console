@@ -21,8 +21,8 @@ namespace PG10Assignment03_AlejandroGamez
         public const int ACTION_DAMAGE_PER_SECOND = 2;
         public const float BASE_GOLD_NEED = 25;
         // Variables
-        public string sName;
-        public int iLevel; //declared it as public for screen class usage                     // can be set between 1 to 10
+        private string sName;
+        private int iLevel;                      
         private int iType;                      // can be set between 1 to 10
         private int iBaseDamagePerClick;
         private int iBaseDamagePerSecond;
@@ -84,6 +84,16 @@ namespace PG10Assignment03_AlejandroGamez
                 iBaseDamagePerClick = 0;
                 iBaseDamagePerSecond = iHeroType;
             }
+        }
+        // Getters
+        public string GetName()
+        {
+            return sName;
+        }
+
+        public int GetHeroType()
+        {
+            return iType;
         }
         
         // Public Functions
