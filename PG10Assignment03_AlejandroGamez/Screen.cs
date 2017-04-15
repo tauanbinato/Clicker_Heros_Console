@@ -9,7 +9,7 @@ using PG10Assignment03_AlejandroGamez.Properties;
 
 namespace PG10Assignment03_AlejandroGamez {
     class Screen {
-        private string textFile = Resources.hud;
+        private string HUD = Resources.hud;
 
         private string hero = Resources.Hero;
 
@@ -21,14 +21,14 @@ namespace PG10Assignment03_AlejandroGamez {
             Console.Clear();
 
             for(int i = 0; i < 10; ++i) {
-                textFile = ReplaceCharsWithTextFile('+', hero, textFile);
+                HUD = ReplaceCharsWithTextFile('+', hero, HUD);
             }
 
             Enemy = ReplaceCharsWithTextFile('+', Resources.Wolf, Enemy);
 
-            textFile = ReplaceCharsWithTextFile('*', Enemy, textFile);
+            HUD = ReplaceCharsWithTextFile('*', Enemy, HUD);
             
-            Input.Print(textFile, ConsoleColor.Green);
+            Input.Print(HUD, ConsoleColor.Green);
         }
 
         private string ReplaceCharsWithTextFile(char toReplace, string textFile, string text2Change) {
