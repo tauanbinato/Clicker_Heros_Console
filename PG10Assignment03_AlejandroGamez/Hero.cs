@@ -56,6 +56,7 @@ namespace PG10Assignment03_AlejandroGamez
                 return BASE_GOLD_NEED * iLevel * iType;
             }
         }
+        /*
         public float fGoldNeedToBuy
         {
             get
@@ -63,6 +64,7 @@ namespace PG10Assignment03_AlejandroGamez
                 return BASE_GOLD_NEED * iType;
             }
         }
+        */
         // Constructors
         public Hero(int iHeroType)
         {

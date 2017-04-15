@@ -62,6 +62,7 @@ namespace PG10Assignment03_AlejandroGamez
             {
                 case ACTION_DEAL_DAMAGE:
                     break;
+                /*
                 case ACTION_HERO_BUY:
                     if (fGold >= hero[iParameter].fGoldNeedToBuy)
                     {
@@ -69,6 +70,7 @@ namespace PG10Assignment03_AlejandroGamez
                         hero[iParameter].Upgrade();
                     }
                     break;
+                */
                 case ACTION_HERO_UPGRADE:
                     if (fGold>=hero[iParameter].fGoldNeedToUpgrade)
                     {
