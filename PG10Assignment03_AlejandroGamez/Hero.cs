@@ -40,6 +40,7 @@ namespace PG10Assignment03_AlejandroGamez
                 return iLevel* iBaseDamagePerSecond;
             }
         }
+        /* is going to be deleted
         public int iDamage
         {
             get
@@ -54,6 +55,7 @@ namespace PG10Assignment03_AlejandroGamez
                 return BASE_GOLD_NEED * iLevel * iType;
             }
         }
+        */
         public float fGoldNeedToBuy
         {
             get
@@ -64,7 +66,9 @@ namespace PG10Assignment03_AlejandroGamez
         // Constructors
         public Hero(int iHeroType)
         {
-            sName = "Type "+iHeroType.ToString()+" Hero";
+            string[] HeroName = new string[] { "Cid", "TreBea", "Brawlr", "Prince", "Fisher", "Cliker", "Samuri", "Leon", "Seer", "Blades" };
+            //sName = "Type "+iHeroType.ToString()+" Hero";
+            sName = HeroName[iHeroType];
             iType = iHeroType;
             iLevel = 0;
             // Only fist hero type can make damage per click. The rest of heroes make damage per second.
