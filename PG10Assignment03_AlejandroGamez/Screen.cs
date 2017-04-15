@@ -23,11 +23,19 @@ namespace PG10Assignment03_AlejandroGamez {
             
             //Reset the variables for repainting
             HUD = Resources.hud;
-            hero = Resources.Hero;
             enemy = Resources.Enemy;
 
             //Replace the + characters for whatever is inside the hero file
             for(int i = 0; i < 10; ++i) {
+                //resets the template everytime a hero is created
+                hero = Resources.Hero;
+                //Set the heroes with specific values using a Singleton to acces them throu the player.
+                //Player is operating as a Hero manager as well.
+                hero = ReplaceCharsWithTextFile('%', hero, Player.Instance.hero[i].fGoldNeedToBuy.ToString(), true);
+                hero = ReplaceCharsWithTextFile('*', hero, Player.Instance.hero[i].sName, true);
+                hero = ReplaceCharsWithTextFile('&', hero, Player.Instance.hero[i].iCurrentDamagePerClick.ToString(), true);
+                hero = ReplaceCharsWithTextFile('^', hero, Player.Instance.hero[i].iLevel.ToString(), true);
+
                 //Set the HUD file as file with the hero HUD istead of + characters.
                 HUD = ReplaceCharsWithTextFile('+', HUD, hero);
             }

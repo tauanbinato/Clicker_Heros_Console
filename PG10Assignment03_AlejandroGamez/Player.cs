@@ -21,7 +21,20 @@ namespace PG10Assignment03_AlejandroGamez
         public const int ACTION_DAMAGE_PER_SECOND = 2;
         public const float BASE_GOLD_NEED = 25;
         // Variables
-        Hero[] hero;
+        public Hero[] hero; //Declared as public for screen class usage
+        
+        //Singleton of the player. (We can take another aproach for this if you want.)
+        private static Player instance;
+
+        public static Player Instance {
+            get {
+                if(instance == null)
+                    instance = new Player();
+                return instance;
+            }
+        }
+        //
+
         public int iDamagePerClick
         {
             get
