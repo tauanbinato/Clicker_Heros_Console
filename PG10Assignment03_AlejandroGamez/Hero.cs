@@ -48,6 +48,7 @@ namespace PG10Assignment03_AlejandroGamez
                 return iCurrentDamagePerClick + iCurrentDamagePerSecond;
             }
         }
+        */
         public float fGoldNeedToUpgrade
         {
             get
@@ -55,7 +56,6 @@ namespace PG10Assignment03_AlejandroGamez
                 return BASE_GOLD_NEED * iLevel * iType;
             }
         }
-        */
         public float fGoldNeedToBuy
         {
             get
